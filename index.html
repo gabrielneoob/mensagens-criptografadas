@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Criptografada</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <form>
+      <h1>Mensagem Criptografada</h1>
+      <fieldset>
+        <label for="texto">Escreva sua mensagem</label>
+        <input type="text" id="texto">
+      </fieldset>
+
+      <fieldset style="display: flex; justify-content:center">
+        <select name="valores" id="cod">
+          <option value="base-64">base-64</option>
+          <option value="cifra-de-cesar">cifra-de-cesar</option>
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <div class="radios">
+          <input type="radio" name="opt" value="codificar" id="codificar">
+          <label for="codificar">Codificar</label>
+        </div>
+        <div class="radios">
+          <input type="radio" name="opt" value="descodificar" id="descodificar">
+          <label for="descodificar">Decodificar</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="cesar">
+        <label style="font-size: 1.4rem;" for="chave-cesar">Chave de Criptografia</label>
+        <input type="number" id="chave-cript" min="1" max="26">
+      </fieldset>
+
+      <fieldset>
+        <label for="resultado">Resultado</label>
+        <input type="text" readonly id="resultado">
+      </fieldset>
+
+      <fieldset class="btn">
+        <button type="button">Criptografar</button>
+      </fieldset>
+    </form>
+
+  </main>
+</body>
+
+</html>
